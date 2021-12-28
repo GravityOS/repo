@@ -1,0 +1,18 @@
+Repository      : gos
+Name            : paru
+Version         : 1.9.2-1
+Description     : Feature packed AUR helper
+Architecture    : x86_64
+URL             : https://aur.archlinux.org/packages/paru/
+Licenses        : GPL-3.0
+Groups          : None
+Provides        : None
+Depends On      : cargo
+Optional Deps   : None
+Conflicts With  : None
+Replaces        : None
+Download Size   : 3.1 MiB
+Installed Size  : 6.22 MiB
+Packager        : Ethan Lane <ethan@vylpes.com>
+Build Date      : Tue 28 Dec 2021 14:35 GMT
+Validated By    : MD5 Sum  SHA-256 Sum  Signature

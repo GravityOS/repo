@@ -1,0 +1,2 @@
+gos gos-keyring 20211223-1
+gos paru 1.9.2-1

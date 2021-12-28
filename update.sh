@@ -23,24 +23,9 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-# Generate DB File
-dbfile="gos.db.tar.xz"
-dbpackages=$(ls packages | sed '/.sig/d')
-
-for package in $dbpackages; do
-    repo-add $dbfile packages/$package --sign
-done
-
-scp gos.* repo.vylpes.com:/mnt/blockstorage/packages/x86_64
-
-# Upload packages to GOS Server
-scp packages/* repo.vylpes.com:/mnt/blockstorage/packages/x86_64
-
 # Generate index page
-sudo pacman -Sy
-
 infourl="https://repo.vylpes.com"
-packages=$(pacman -Sl gos | tr " " "|" | cut -d\| -f 2)
+packages=$(cat packages.txt | tr " " "|" | cut -d\| -f 2)
 EXT="zst"
 
 file="index.html"
@@ -95,7 +80,7 @@ EOF
 
 for package in $packages; do
     echo "Scanning $package"
-    info="$(pacman -Si "$package")"
+    info="$(cat "info/$package.txt")"
     desc="$(echo "$info" | head -n4 | tail -n1 | cut -d: -f2)"
     vers="$(echo "$info" | head -n3 | tail -n1 | cut -d: -f2 | sed -E 's/ +//g')"
     download="$(echo "$info" | tail -n5 | head -n1 | cut -d: -f2 | sed -E 's/ +//g')"
@@ -116,5 +101,3 @@ printf "\t\t</table>\n" >> $file
 printf "\n\t<a href=\"%s\">More info</a>\n" "$infourl" >> $file
 
 printf "\t</body>\n</html>" >> $file
-
-scp index.html repo.vylpes.com:/mnt/blockstorage/packages
