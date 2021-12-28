@@ -1,0 +1,18 @@
+Repository      : gos
+Name            : linux
+Version         : 5.16.0.gravity2-1
+Description     : GravityOS kernel sources
+Architecture    : x86_64
+URL             : https://github.com/gravityos/linux
+Licenses        : GPL-2.0
+Groups          : None
+Provides        : None
+Depends On      : cargo
+Optional Deps   : None
+Conflicts With  : None
+Replaces        : None
+Download Size   : 9.9 MiB
+Installed Size  : 6.22 MiB
+Packager        : Ethan Lane <ethan@vylpes.com>
+Build Date      : Tue 28 Dec 2021 15:38 GMT
+Validated By    : MD5 Sum  SHA-256 Sum  Signature

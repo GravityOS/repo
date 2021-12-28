@@ -1,2 +1,5 @@
 gos gos-keyring 20211223-1
+gos linux-docs 5.16.0.gravity2-1
+gos linux-headers 5.16.0.gravity2-1
+gos linux 5.16.0.gravity2-1
 gos paru 1.9.2-1
