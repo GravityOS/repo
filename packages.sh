@@ -8,5 +8,5 @@ dbfile="gos.db.tar.xz"
 dbpackages=$(ls packages | sed '/.sig/d')
 
 for package in $dbpackages; do
-	repo-add $dvfile packages/$package --sign
+	repo-add $dbfile packages/$package --sign
 done
