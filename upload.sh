@@ -22,14 +22,6 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-# Generate DB File
-dbfile="gos.db.tar.xz"
-dbpackages=$(ls packages | sed '/.sig/d')
-
-for package in $dbpackages; do
-    repo-add $dbfile packages/$package --sign
-done
-
 scp gos.* repo.vylpes.com:/mnt/blockstorage/packages/x86_64
 
 # Upload packages to GOS Server
