@@ -1,6 +1,6 @@
 Repository      : gos
 Name            : linux-docs
-Version         : 5.16.0.gravity2-1
+Version         : 5.17.0.gravity4-1
 Description     : GravityOS kernel docs
 Architecture    : x86_64
 URL             : https://github.com/gravityos/linux
