@@ -22,10 +22,10 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-scp gos.* repo.vylpes.com:/mnt/blockstorage/packages/x86_64
+scp gos.* repo.vylpes.com:/mnt/repo/repo/x86_64
 
 # Upload packages to GOS Server
-scp packages/* repo.vylpes.com:/mnt/blockstorage/packages/x86_64
+scp packages/* repo.vylpes.com:/mnt/repo/repo/x86_64
 
 # Upload index.html to GOS Server
-scp index.html repo.vylpes.com:/mnt/blockstorage/packages
+scp index.html repo.vylpes.com:/mnt/repo/repo
